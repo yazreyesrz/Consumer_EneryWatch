@@ -1,6 +1,8 @@
 const mqtt = require("mqtt");
 const io = require("socket.io-client");
+const dote = require("dotenv");
 
+dote.config();
 const brokerAddress = process.env.MQTT_BROKER_URL;
 const topicTemperature = "casa/temperatura";
 const topicCurrent = "casa/corriente";
